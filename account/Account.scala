@@ -1,5 +1,5 @@
 package account
-case class Account(acc: String, bal: Double) {
+case class Acc(acc: String, bal: Double) {
   var accountNo = acc
   var balance = bal
 
@@ -7,7 +7,7 @@ case class Account(acc: String, bal: Double) {
 
   def deposit(amount: Double) = balance = balance + amount
 
-  def transfer(amount: Double, toAccount: Account) = {
+  def transfer(amount: Double, toAccount: Acc) = {
     balance = balance - amount
     toAccount.balance = toAccount.balance + amount
   }
